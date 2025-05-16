@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - READ_TIMEOUT=15
+      - WRITE_TIMEOUT=15
+      - IDLE_TIMEOUT=60
